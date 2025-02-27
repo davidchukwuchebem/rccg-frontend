@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-regal-blue: #2b3860;
+}
+
+
+.hero{
+  background-image: url("/images.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
