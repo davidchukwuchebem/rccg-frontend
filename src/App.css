@@ -1,4 +1,12 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-100 text-gray-900;
+  /* Change to any Tailwind color */
+}
 
 @theme {
   --color-regal-blue: #2b3860;
