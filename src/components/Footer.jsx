@@ -160,7 +160,7 @@ const Footer = () => {
         <div className="mt-6 text-center">
           <p className="text-white font-semibold">Become a Partner</p>
           <p className="text-sm mt-2">
-            34, Budland Street, Ojodu, Ikeja, Lagos Nigeria
+            31 - 33, Ewupe Road, Oju-ore, Ota, Ogun State, Nigeria
           </p>
           <p className="text-sm mt-1">
             <a href="tel:+2348186253251" className="hover:text-blue-400">
@@ -169,16 +169,19 @@ const Footer = () => {
             |
             <a href="tel:+2349061767430" className="hover:text-blue-400">
               {" "}
-              +234 906 176 7430
+              +234 803 800 7686
             </a>
           </p>
           <p className="text-sm mt-1">
-            <a href="mailto:info@rcnlagos.org" className="hover:text-blue-400">
-              info@rcnlagos.org
+            <a
+              href="mailto:reg44hqyaya@gmail.com"
+              className="hover:text-blue-400"
+            >
+              reg44hqyaya@gmail.com
             </a>
           </p>
           <p className="text-sm text-gray-500 mt-4">
-            © 2025 RCN Lagos. All Rights Reserved.
+            © 2025 RCCG Ota. All Rights Reserved.
           </p>
         </div>
       </div>

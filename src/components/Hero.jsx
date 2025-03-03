@@ -10,13 +10,13 @@ const slides = [
       "We are a ministry with a single-minded focus on restoring the prayer commission of the church.",
   },
   {
-    image: "img.jpg",
+    image: "rccg.png",
     title: "Join Our Worship Services",
     description:
       "Experience the power of prayer and uplifting worship every Sunday and Wednesday.",
   },
   {
-    image: "img.jpg",
+    image: "sermon.avif",
     title: "Engage with the Community",
     description:
       "We are here to help you grow spiritually and connect with a loving church family.",

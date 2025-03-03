@@ -1,28 +1,27 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./index.css";
-import "./App.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Programs from "./components/Programs";
-import Message from "./components/Message";
-import Profile from "./components/Profile";
-import Newsletter from "./components/Newsletter";
 import Footer from "./components/Footer";
+import Home from "../pages/Home";
+import Sermon from "../pages/Sermon";
+import Global from "../pages/Global";
+import About from "../pages/About";
+import Ministers from "../pages/Ministers";
+import Minister from "../pages/Minister";
 
 function App() {
   return (
-    <>
+    <Router>
       <Header />
-      <Hero />
-      <Programs />
-      <Profile />
-      <Message />
-      <Newsletter />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sermons" element={<Sermon />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/global" element={<Global />} />
+        <Route path="/pastors" element={<Ministers />} />
+        <Route path="/minister" element={<Minister />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 

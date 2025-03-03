@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-100 text-gray-900;
+  @apply bg-gray-400 text-gray-900;
   /* Change to any Tailwind color */
 }
 
@@ -17,4 +17,8 @@ body {
   background-image: url("/images.jfif");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+button, a{
+  cursor: pointer;
 }
