@@ -1,6 +1,7 @@
 import { faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const slides = [
   {
@@ -64,7 +65,7 @@ export default function Hero() {
               STREAM LIVE
             </button>
             <button className="px-6 font-bold text-sm py-3 bg-gray-200 text-gray-700 rounded-lg shadow-lg shadow-gray-400 hover:bg-gray-300">
-              KNOW MORE
+              <Link to="/about">KNOW MORE</Link>
             </button>
           </div>
         </div>

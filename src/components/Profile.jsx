@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Profile() {
   return (
     <>
@@ -21,7 +22,7 @@ export default function Profile() {
               Read Full Profile
             </button>
             <button className="bg-white shadow-lg shadow-gray-50 text-blue-900 font-semibold py-2 px-4 rounded hover:bg-gray-200">
-              Meet All Pastors
+              <Link to="/pastors">Meet All Pastors</Link>
             </button>
           </div>
         </div>
