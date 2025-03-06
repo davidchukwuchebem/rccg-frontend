@@ -73,14 +73,14 @@ export default function Hero() {
       {/* Image Carousel Section */}
       <section className="relative w-full h-[500px] my-5 flex flex-col items-center justify-center text-center text-white px-6 overflow-hidden">
         {/* Image Wrapper with Border */}
-        <div className="absolute inset-0 w-full h-full border-[15px] border-gray-700 overflow-hidden transition-opacity duration-1000">
+        <div className="absolute inset-0 w-full h-full border-[8px] border-gray-700 overflow-hidden transition-opacity duration-1000">
           {slides.map((slide, i) => (
             <img
               key={i}
               src={slide.image}
               alt=""
               aria-hidden={i !== index}
-              className={`absolute inset-0 w-full h-full object-cover rounded-[10px] transition-opacity duration-1000 ${
+              className={`absolute inset-0 w-full h-full object-cover rounded-[8px] transition-opacity duration-1000 ${
                 i === index ? "opacity-100" : "opacity-0"
               }`}
             />

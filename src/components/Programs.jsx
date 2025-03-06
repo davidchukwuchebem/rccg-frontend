@@ -3,7 +3,7 @@ import React from "react";
 export default function Programs() {
   return (
     <>
-      <div className="">
+      <div className="mt-5">
         <p className="text-[35px] text-center py-5 text-gray-400 font-bold">
           OUR PROGRAMS
         </p>

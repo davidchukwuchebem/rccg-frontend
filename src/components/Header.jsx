@@ -12,9 +12,13 @@ export default function Header() {
       {/* Header */}
       <header className="bg-white shadow-md p-4 px-5 flex justify-between items-center fixed top-0 left-0 w-full z-50">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <img src="/rccg.png" alt="Logo" className="h-10 w-10" />
-          <span className="text-[20px] font-bold text-gray-700">RCCG Ota</span>
+        <div>
+          <Link className="flex items-center gap-2" to="/">
+            <img src="/rccg.png" alt="Logo" className="h-10 w-10" />
+            <span className="text-[20px] font-bold text-gray-700">
+              RCCG Ota
+            </span>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
