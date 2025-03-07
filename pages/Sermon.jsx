@@ -30,7 +30,7 @@ export default function Sermon() {
         />
       </div>
 
-      <Message searchQuery={searchQuery} />
+      {/* <Message searchQuery={searchQuery} /> */}
     </>
   );
 }

@@ -1,8 +1,8 @@
 import Hero from "../src/components/Hero";
-import Programs from "../src/components/Programs";
+// import Programs from "../components/Programs";
 import Profile from "../src/components/Profile";
 import Message from "../src/components/Message";
-import Newsletter from "../src/components/Newsletter";
+// import Newsletter from "../components/Newsletter";
 import About from "./About";
 
 export default function Home() {
@@ -19,8 +19,7 @@ export default function Home() {
         <p className="text-[35px] text-center py-5 text-gray-400 font-bold">
           MESSAGES
         </p>
-        <Message />
-        <Newsletter />
+        {/* <Message /> */}
       </div>
     </>
   );
