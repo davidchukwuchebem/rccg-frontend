@@ -1,4 +1,4 @@
-import Pastors from "./Pastors";
+import Pastors from "../src/components/Pastors";
 export default function Ministers() {
   return (
     <>

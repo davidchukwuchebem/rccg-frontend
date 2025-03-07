@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "../index.css";
+import Footer from "../components/Footer";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);

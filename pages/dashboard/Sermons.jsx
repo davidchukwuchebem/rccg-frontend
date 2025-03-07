@@ -1,18 +1,14 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import Message from "../../src/components/Message";
 
 export default function Sermons() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
-  const [selectedVideo, setSelectedVideo] = useState("");
   const [formData, setFormData] = useState({
     title: "",
-    preacher: "",
-    date: "",
-    description: "",
-    videoLink: "",
+    minister: "",
+    link: "",
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -51,41 +47,16 @@ export default function Sermons() {
       setIsModalOpen(false);
       setFormData({
         title: "",
-        preacher: "",
+        minister: "",
         date: "",
         description: "",
-        videoLink: "",
+        link: "",
       }); // Reset form
     } catch (err) {
       setError(err.message);
     } finally {
       setLoading(false);
     }
-  };
-
-  // Open Video Modal
-  const openVideoModal = (videoUrl) => {
-    setSelectedVideo(videoUrl);
-    setIsVideoModalOpen(true);
-  };
-
-  // Close Video Modal
-  const closeVideoModal = () => {
-    setSelectedVideo("");
-    setIsVideoModalOpen(false);
-  };
-
-  // Function to extract the embeddable video URL
-  const getEmbedUrl = (url) => {
-    if (url.includes("youtube.com") || url.includes("youtu.be")) {
-      const videoId = url.split("v=")[1]?.split("&")[0] || url.split("/").pop();
-      return `https://www.youtube.com/embed/${videoId}`;
-    }
-    if (url.includes("vimeo.com")) {
-      const videoId = url.split("/").pop();
-      return `https://player.vimeo.com/video/${videoId}`;
-    }
-    return "";
   };
 
   return (
@@ -127,35 +98,18 @@ export default function Sermons() {
               />
               <input
                 type="text"
-                name="preacher"
-                placeholder="Preacher"
-                value={formData.preacher}
-                onChange={handleChange}
-                required
-                className="w-full p-2 border rounded"
-              />
-              <input
-                type="date"
-                name="date"
-                placeholder="Date"
-                value={formData.date}
-                onChange={handleChange}
-                required
-                className="w-full p-2 border rounded"
-              />
-              <textarea
-                name="description"
-                placeholder="Description"
-                value={formData.description}
+                name="minister"
+                placeholder="minister"
+                value={formData.minister}
                 onChange={handleChange}
                 required
                 className="w-full p-2 border rounded"
               />
               <input
                 type="text"
-                name="videoLink"
+                name="link"
                 placeholder="YouTube/Vimeo Link"
-                value={formData.videoLink}
+                value={formData.link}
                 onChange={handleChange}
                 className="w-full p-2 border rounded"
               />
@@ -180,50 +134,6 @@ export default function Sermons() {
           </div>
         </div>
       )}
-
-      {/* Video Modal */}
-      {isVideoModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded-lg w-[90%] max-w-2xl shadow-lg relative">
-            <button
-              onClick={closeVideoModal}
-              className="absolute top-2 right-2 text-gray-600 hover:text-red-600"
-            >
-              <FontAwesomeIcon icon={faTimes} size="lg" />
-            </button>
-            <h3 className="text-xl font-bold mb-4">Sermon Video</h3>
-            <div className="relative w-full h-0 pb-[56.25%]">
-              {selectedVideo ? (
-                <iframe
-                  src={getEmbedUrl(selectedVideo)}
-                  title="Sermon Video"
-                  className="absolute top-0 left-0 w-full h-full"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              ) : (
-                <p className="text-gray-500">No video available</p>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Example List of Sermons */}
-      <section className="mt-4 p-4 bg-white shadow-md rounded-md">
-        <h2 className="text-lg font-semibold mb-2">Recent Sermons</h2>
-        <ul>
-          <li
-            onClick={() =>
-              openVideoModal("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
-            }
-            className="cursor-pointer text-blue-600 hover:underline"
-          >
-            Example Sermon - Click to Watch
-          </li>
-        </ul>
-      </section>
     </>
   );
 }
